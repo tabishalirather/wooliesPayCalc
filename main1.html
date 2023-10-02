@@ -1,1 +1,108 @@
-<h1>This is pretty</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weekly Earnings Calculator</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Weekly Earnings Calculator</h1>
+
+		<!-- Employment Type Selection -->
+		<label for="employmentType">Select Employment Type:</label>
+		<select id="employmentType">
+			<option value="part-time">Part-time</option>
+			<option value="casual">Casual</option>
+		</select>
+
+		<!-- Base Pay Rate Input -->
+		<label for="baseRate">Enter Base Pay Rate ($):</label>
+		<input type="number" id="baseRate" step="0.01" placeholder="Enter Base Pay Rate">
+		<!-- Days and Hours Input -->
+		<div class="days-input">
+			<h2>Select Days and Enter Working Hours:</h2>
+
+			<!-- Monday -->
+			<div class="day" id="monday">
+				<input type="checkbox" id="mondayCheckbox">
+				<label for="mondayCheckbox">Monday</label>
+				<!-- <div class="timeInput"> -->
+				<input type="time" class="start-time">
+				<input type="time" class="end-time">
+			</div>
+		</div>
+
+		<!-- Tuesday -->
+		<div class="day" id="tuesday">
+			<input type="checkbox" id="tuesdayCheckbox">
+			<label for="tuesdayCheckbox">Tuesday</label>
+			<input type="time" class="start-time">
+			<input type="time" class="end-time">
+		</div>
+
+		<!-- Wednesday -->
+		<div class="day" id="wednesday">
+			<input type="checkbox" id="wednesdayCheckbox">
+			<label for="wednesdayCheckbox">Wednesday</label>
+			<input type="time" class="start-time">
+			<input type="time" class="end-time">
+		</div>
+
+		<!-- Thursday -->
+		<div class="day" id="thursday">
+			<input type="checkbox" id="thursdayCheckbox">
+			<label for="thursdayCheckbox">Thursday</label>
+			<input type="time" class="start-time">
+			<input type="time" class="end-time">
+		</div>
+
+		<!-- Friday -->
+		<div class="day" id="friday">
+			<input type="checkbox" id="fridayCheckbox">
+			<label for="fridayCheckbox">Friday</label>
+			<input type="time" class="start-time">
+			<input type="time" class="end-time">
+		</div>
+
+		<!-- Saturday -->
+		<div class="day" id="saturday">
+			<input type="checkbox" id="saturdayCheckbox">
+			<label for="saturdayCheckbox">Saturday</label>
+			<input type="time" class="start-time">
+			<input type="time" class="end-time">
+		</div>
+
+		<!-- Sunday -->
+		<div class="day" id="sunday">
+			<input type="checkbox" id="sundayCheckbox">
+			<label for="sundayCheckbox">Sunday</label>
+			<input type="time" class="start-time">
+			<input type="time" class="end-time">
+		</div>
+
+	</div>
+
+	<!-- Calculate and Display Result -->
+	<button id="calculateButton">Calculate Weekly Earnings</button>
+	<!-- <div class="result">
+		<h2>Your Weekly Earnings:</h2>
+		<p id="weeklyEarnings">$0.00</p>
+	</div>
+	</div> -->
+	<div id="earningsModal" class="modal">
+		<div class="modal-content">
+		    <span class="close-btn">&times;</span>
+		    <h2>Your Weekly Earnings:</h2>
+		    <p id="weeklyEarnings" class="big-earnings">$0.00</p>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
